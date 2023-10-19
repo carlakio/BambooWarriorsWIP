@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="393dp"
+    android:layout_height="1300dp"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1300dp"
+            android:background="@drawable/background1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_width="167dp"
+                android:layout_height="281dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="560dp"
+                android:background="@drawable/contact_us" />
+
+            <ImageButton
+                android:layout_width="167dp"
+                android:layout_height="281dp"
+                android:layout_marginLeft="212dp"
+                android:layout_marginTop="560dp"
+                android:background="@drawable/bamboo_warriors" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/button_Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-615dp"
+        android:background="@drawable/bottom_bar_1_"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
