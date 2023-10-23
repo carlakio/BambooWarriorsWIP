@@ -13,6 +13,21 @@
         android:theme="@style/Theme.Bambooratwarriors"
         tools:targetApi="31">
         <activity
+            android:name=".seemoredesc"
+            android:exported="false" />
+        <activity
+            android:name=".ouremblemdesc"
+            android:exported="false" />
+        <activity
+            android:name=".merchandise"
+            android:exported="false" />
+        <activity
+            android:name=".bamboowarriorsdesc"
+            android:exported="false" />
+        <activity
+            android:name=".contactUs"
+            android:exported="false" />
+        <activity
             android:name=".Reg_screen"
             android:exported="false" />
         <activity
