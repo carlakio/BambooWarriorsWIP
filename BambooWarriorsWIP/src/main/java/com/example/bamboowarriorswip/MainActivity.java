@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         contactUs_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent contactUs = new Intent(MainActivity.this, MainActivity2.class);
+                Intent contactUs = new Intent(MainActivity.this, contactUs.class);
                 startActivity(contactUs);
             }
 

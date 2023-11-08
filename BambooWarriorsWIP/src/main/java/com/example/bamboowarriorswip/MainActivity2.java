@@ -36,5 +36,8 @@ public class MainActivity2 extends AppCompatActivity {
             }
 
         });
+
+        //AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
     }
 }
