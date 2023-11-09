@@ -1,13 +1,20 @@
 package com.example.bamboowarriorswip;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -75,27 +82,74 @@ public class MainActivity extends AppCompatActivity {
         button_Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent login_Screen = new Intent(MainActivity.this, MainActivity2.class);
-                startActivity(login_Screen);
+                Intent Login = new Intent(MainActivity.this, MainActivity2.class);
+                startActivity(Login);
             }
 
         });
 
+
+
+        // sample action listener for button
         settings_btn.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View view) {
-                    showMessageSentDialog();
+                    showDialog();
             }
         });
 
 
     }
 
-    private void showCustomDialog() {
+    private void showDialog() {
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.bottom_sheet_layout);
+
+
+        Button AccountLayout = dialog.findViewById(R.id.Account_Button);
+        Button ProfileLayout = dialog.findViewById(R.id.Profile_Button);
+        Button PasswordLayout = dialog.findViewById(R.id.Password_Button);
+        Button PrivacyLayout = dialog.findViewById(R.id.Privacy_Button);
+
+        AccountLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Toast.makeText(MainActivity.this, "Account is clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
+        ProfileLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Toast.makeText(MainActivity.this, "Profile is clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
+        PasswordLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Toast.makeText(MainActivity.this, "Password Confirmation sent", Toast.LENGTH_SHORT).show();
+            }
+        });
+        PrivacyLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Toast.makeText(MainActivity.this, "Privacy is clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        dialog.show();
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.R.color.transparent));
+        dialog.getWindow().getAttributes().windowAnimations = R.style.dialogAnimation;
+        dialog.getWindow().setGravity(Gravity.BOTTOM);
+    }
+
+    // dialog alert
+    /*private void showCustomDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = getLayoutInflater();
 
-        View dialogView = inflater.inflate(R.layout.overlay_settings, (ViewGroup) findViewById(R.id.custom_dialog_container));
+        View dialogView = inflater.inflate(R.layout.overlay_settings, null);
 
         // Adjust width and height of the dialog
         ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(
@@ -106,8 +160,8 @@ public class MainActivity extends AppCompatActivity {
         dialogView.setLayoutParams(params);
 
         builder.setView(dialogView)
-                .setTitle("Custom Dialog Example")
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                .setTitle("Settings")
+                .setNegativeButton("Back", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();
                     }
@@ -149,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         dialog.show();
-    }
+    }*/
 
 
 
