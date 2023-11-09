@@ -4,6 +4,274 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/merch_bg"
     tools:context=".merchandise">
+
+    <ImageView
+        android:id="@+id/merch_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/merch_header" />
+
+    <ImageButton
+        android:id="@+id/merchbag_btn"
+        android:layout_width="38dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/merchbag" />
+
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-20dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/merchbag_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/merchbag2" />
+
+
+    <TextView
+        android:id="@+id/merch_bag_incr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="21dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+
+
+    <ImageButton
+        android:id="@+id/keychain"
+        android:layout_width="162dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/merch_header"
+        app:srcCompat="@drawable/bamboo_keychain" />
+
+    <TextView
+        android:id="@+id/keychain_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="-225dp"
+        android:text="Bamboo Keychain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keychain" />
+
+    <TextView
+        android:id="@+id/quantity_keychain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-145dp"
+        android:layout_marginTop="-40dp"
+        android:text="Qty:"
+        app:layout_constraintStart_toEndOf="@+id/keychain"
+        app:layout_constraintTop_toBottomOf="@+id/keychain" />
+
+    <EditText
+        android:id="@+id/qty_input_keychain"
+        android:layout_width="89dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="-60dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/quantity_keychain"
+        app:layout_constraintTop_toBottomOf="@+id/keychain" />
+
+
+
+
+
+
+    <ImageButton
+        android:id="@+id/bambootop"
+        android:layout_width="162dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/merch_header"
+        app:srcCompat="@drawable/bamboo_top" />
+
+    <TextView
+        android:id="@+id/bambootop_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-145dp"
+        android:layout_marginTop="-225dp"
+        android:text="Bamboo Top"
+        app:layout_constraintStart_toEndOf="@+id/bambootop"
+        app:layout_constraintTop_toBottomOf="@+id/bambootop" />
+
+    <TextView
+        android:id="@+id/quantity_bambootop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-145dp"
+        android:layout_marginTop="-40dp"
+        android:text="Qty:"
+        app:layout_constraintStart_toEndOf="@+id/bambootop"
+        app:layout_constraintTop_toBottomOf="@+id/bambootop" />
+
+    <EditText
+        android:id="@+id/qty_input_bambootop"
+        android:layout_width="89dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="-60dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/quantity_bambootop"
+        app:layout_constraintTop_toBottomOf="@+id/bambootop" />
+
+
+
+
+
+
+
+
+
+
+    <ImageButton
+        android:id="@+id/icedcoffee"
+        android:layout_width="162dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="37dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keychain"
+        app:srcCompat="@drawable/ice_coffee"
+        />
+
+    <TextView
+        android:id="@+id/icedcoffee_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-145dp"
+        android:layout_marginTop="-225dp"
+        android:text="Iced Coffee"
+        app:layout_constraintStart_toEndOf="@+id/icedcoffee"
+        app:layout_constraintTop_toBottomOf="@+id/icedcoffee" />
+
+    <TextView
+        android:id="@+id/quantity_icedcoffee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-145dp"
+        android:layout_marginTop="-40dp"
+        android:text="Qty:"
+        app:layout_constraintStart_toEndOf="@+id/icedcoffee"
+        app:layout_constraintTop_toBottomOf="@+id/icedcoffee" />
+
+    <EditText
+        android:id="@+id/qty_input_icedcoffee"
+        android:layout_width="89dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="-60dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/quantity_icedcoffee"
+        app:layout_constraintTop_toBottomOf="@+id/icedcoffee" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <ImageButton
+        android:id="@+id/bamboocap"
+        android:layout_width="162dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bambootop"
+        app:srcCompat="@drawable/bamboo_cap" />
+
+    <TextView
+        android:id="@+id/bamboocap_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-145dp"
+        android:layout_marginTop="-225dp"
+        android:text="Bamboo Cap"
+        app:layout_constraintStart_toEndOf="@+id/bamboocap"
+        app:layout_constraintTop_toBottomOf="@+id/bamboocap" />
+
+    <TextView
+        android:id="@+id/quantity_bamboocap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-145dp"
+        android:layout_marginTop="-40dp"
+        android:text="Qty:"
+        app:layout_constraintStart_toEndOf="@+id/bamboocap"
+        app:layout_constraintTop_toBottomOf="@+id/bamboocap" />
+
+    <EditText
+        android:id="@+id/qty_input_bamboocap"
+        android:layout_width="89dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="-60dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/quantity_bamboocap"
+        app:layout_constraintTop_toBottomOf="@+id/bamboocap" />
+
+
+
+
+
+
+
+
+
+    <Button
+        android:id="@+id/addtocart_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="16dp"
+        android:text="Add to cart items"
+        android:textColor="#000000"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icedcoffee" />
+
+
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

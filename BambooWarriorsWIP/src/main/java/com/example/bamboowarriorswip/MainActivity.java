@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         merch_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent merchandise = new Intent(MainActivity.this, MainActivity2.class);
+                Intent merchandise = new Intent(MainActivity.this, merchandise.class);
                 startActivity(merchandise);
             }
 
