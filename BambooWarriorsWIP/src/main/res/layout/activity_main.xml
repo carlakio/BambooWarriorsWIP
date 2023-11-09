@@ -78,6 +78,13 @@
                 android:layout_marginTop="1280dp"
                 android:layout_marginLeft="225dp"
                 app:srcCompat="@drawable/see_more" />
+            <ImageButton
+                android:id="@+id/settings_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="170dp"
+                app:srcCompat="@drawable/vector" />
 
 
         </RelativeLayout>

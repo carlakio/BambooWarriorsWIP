@@ -1,11 +1,15 @@
 package com.example.bamboowarriorswip;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageButton;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButton bambooWarriors_btn = findViewById(R.id.bambooWarriors_btn);
         ImageButton merch_btn = findViewById(R.id.merchandise_btn);
         ImageButton ourEmblem_btn = findViewById(R.id.ourEmblem_btn);
+        ImageButton settings_btn = findViewById(R.id.settings_btn);
 
         contactUs_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,5 +80,77 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
+        settings_btn.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View view) {
+                    showMessageSentDialog();
+            }
+        });
+
+
     }
+
+    private void showCustomDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+
+        View dialogView = inflater.inflate(R.layout.overlay_settings, (ViewGroup) findViewById(R.id.custom_dialog_container));
+
+        // Adjust width and height of the dialog
+        ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+        );
+
+        dialogView.setLayoutParams(params);
+
+        builder.setView(dialogView)
+                .setTitle("Custom Dialog Example")
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+
+        final AlertDialog dialog = builder.create();
+
+        // Set click listeners for the buttons in your custom dialog
+        dialogView.findViewById(R.id.button1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Code for button 1 click
+                dialog.dismiss();
+            }
+        });
+
+        dialogView.findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Code for button 2 click
+                dialog.dismiss();
+            }
+        });
+
+        dialogView.findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Code for button 3 click
+                dialog.dismiss();
+            }
+        });
+
+        dialogView.findViewById(R.id.button4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Code for button 4 click
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
+
+
 }
