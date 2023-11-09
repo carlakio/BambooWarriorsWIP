@@ -44,10 +44,14 @@ public class merchandise extends AppCompatActivity {
                 Integer BC = Integer.parseInt(bamboocap);
 
                 Integer addtocart = KC + BT + IC + BC;
-
+                Integer reset = 0;
                 itemCount[0] += addtocart; // Increment the count
 
                 merchbag.setText(String.valueOf(itemCount[0])); // Update the TextView with the new count
+                qty_input_keychain.setText(reset.toString());
+                qty_input_bambootop.setText(reset.toString());
+                qty_input_icedcoffee.setText(reset.toString());
+                qty_input_bamboocap.setText(reset.toString());
 
                 Toast.makeText(merchandise.this, addtocart + " items added to cart", Toast.LENGTH_SHORT).show();
             }
