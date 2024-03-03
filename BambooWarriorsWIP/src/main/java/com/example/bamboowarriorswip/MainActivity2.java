@@ -42,7 +42,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         // Initialize Google Sign-In
         GoogleSignInOptions options = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-
+                .requestIdToken(getString(R.string.client_id))
                 .requestEmail()
                 .build();
         googleSignInClient = GoogleSignIn.getClient(MainActivity2.this, options);
@@ -101,9 +101,9 @@ public class MainActivity2 extends AppCompatActivity {
                             auth = FirebaseAuth.getInstance();
 
                             // Redirect to the main screen
-                            Intent welcome_Screen = new Intent(MainActivity2.this, loginscreen_loading.class);
-                            startActivity(welcome_Screen);
-
+                            Intent mainIntent = new Intent(MainActivity2.this, loginscreen_loading.class);
+                            startActivity(mainIntent);
+                            finish(); // Optional: Close the current activity if you don't want to go back to it
 
                             // You can update UI here with user information if needed
                             Toast.makeText(MainActivity2.this, "Signed in Successfully!", Toast.LENGTH_SHORT).show();

@@ -34,7 +34,7 @@
             android:id="@+id/Account_Button"
             android:layout_width="356dp"
             android:layout_height="wrap_content"
-            android:text="Account"
+            android:text="Catalouge"
             android:textColor="#FFFFFF"
             app:backgroundTint="#000000"
             tools:layout_editor_absoluteX="160dp"

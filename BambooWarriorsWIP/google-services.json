@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "417862686824",
+    "project_id": "fir-try-69419",
+    "storage_bucket": "fir-try-69419.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417862686824:android:3a748c396e924c65f943dd",
+        "android_client_info": {
+          "package_name": "com.example.bamboowarriorswip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "417862686824-96ish6d68t84o4hnevq8kj3124hrg2dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyNWaUNn7tmwRprECcS82Dx2v1QyRnXBo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "417862686824-96ish6d68t84o4hnevq8kj3124hrg2dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417862686824:android:66562d4d08b7eeddf943dd",
+        "android_client_info": {
+          "package_name": "com.example.firebasetry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "417862686824-2bii5uirq3n976pnf7ber014onkhoc9l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firebasetry",
+            "certificate_hash": "b9565f4b3fba372452b00d2fd8d9d3f64a31eda4"
+          }
+        },
+        {
+          "client_id": "417862686824-96ish6d68t84o4hnevq8kj3124hrg2dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyNWaUNn7tmwRprECcS82Dx2v1QyRnXBo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "417862686824-96ish6d68t84o4hnevq8kj3124hrg2dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

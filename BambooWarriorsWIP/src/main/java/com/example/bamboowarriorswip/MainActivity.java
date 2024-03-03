@@ -1,19 +1,15 @@
 package com.example.bamboowarriorswip;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -115,7 +111,8 @@ public class MainActivity extends AppCompatActivity {
         AccountLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                Toast.makeText(MainActivity.this, "Account is clicked", Toast.LENGTH_SHORT).show();
+                Intent catalouge = new Intent(MainActivity.this, catalouge.class );
+                startActivity(catalouge);
             }
         });
         ProfileLayout.setOnClickListener(new View.OnClickListener() {
